@@ -1,0 +1,21 @@
+Notes about the Author:
+
+Jesse Rovira, Brazilian, developer;
+jesse.rovira@gmail.com
+jesse.rovira@merlion-si.com.br / www.merlion-si.com.br
+
+Contribute to this project! And count on me!
+
+Thanks!
+
+Notes about the Project:
+
+The project is based on the following architecture:
+
+- PHP 5.6;
+- JAVA 1.8;
+- iReport 3.0;
+
+Some other libs could be useful, but not strictly required to run this project, like:
+
+- Some PDF Lib;

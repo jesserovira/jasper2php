@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="list_report"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="teste" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="respath" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["C:\\wamp64\\www\\dolibarr\\htdocs\\reports\\societe\\images\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[select * from llx_societe]]></queryString>
+
+	<field name="rowid" class="java.lang.Integer"/>
+	<field name="nom" class="java.lang.String"/>
+	<field name="name_alias" class="java.lang.String"/>
+	<field name="entity" class="java.lang.Integer"/>
+	<field name="ref_ext" class="java.lang.String"/>
+	<field name="ref_int" class="java.lang.String"/>
+	<field name="statut" class="java.lang.Integer"/>
+	<field name="parent" class="java.lang.Integer"/>
+	<field name="tms" class="java.sql.Timestamp"/>
+	<field name="datec" class="java.sql.Timestamp"/>
+	<field name="status" class="java.lang.Integer"/>
+	<field name="code_client" class="java.lang.String"/>
+	<field name="code_fournisseur" class="java.lang.String"/>
+	<field name="code_compta" class="java.lang.String"/>
+	<field name="code_compta_fournisseur" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="zip" class="java.lang.String"/>
+	<field name="town" class="java.lang.String"/>
+	<field name="fk_departement" class="java.lang.Integer"/>
+	<field name="fk_pays" class="java.lang.Integer"/>
+	<field name="phone" class="java.lang.String"/>
+	<field name="fax" class="java.lang.String"/>
+	<field name="url" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="skype" class="java.lang.String"/>
+	<field name="fk_effectif" class="java.lang.Integer"/>
+	<field name="fk_typent" class="java.lang.Integer"/>
+	<field name="fk_forme_juridique" class="java.lang.Integer"/>
+	<field name="fk_currency" class="java.lang.String"/>
+	<field name="siren" class="java.lang.String"/>
+	<field name="siret" class="java.lang.String"/>
+	<field name="ape" class="java.lang.String"/>
+	<field name="idprof4" class="java.lang.String"/>
+	<field name="idprof5" class="java.lang.String"/>
+	<field name="idprof6" class="java.lang.String"/>
+	<field name="tva_intra" class="java.lang.String"/>
+	<field name="capital" class="java.lang.Double"/>
+	<field name="fk_stcomm" class="java.lang.Integer"/>
+	<field name="note_private" class="java.lang.String"/>
+	<field name="note_public" class="java.lang.String"/>
+	<field name="model_pdf" class="java.lang.String"/>
+	<field name="prefix_comm" class="java.lang.String"/>
+	<field name="client" class="java.lang.Integer"/>
+	<field name="fournisseur" class="java.lang.Integer"/>
+	<field name="supplier_account" class="java.lang.String"/>
+	<field name="fk_prospectlevel" class="java.lang.String"/>
+	<field name="fk_incoterms" class="java.lang.Integer"/>
+	<field name="location_incoterms" class="java.lang.String"/>
+	<field name="customer_bad" class="java.lang.Integer"/>
+	<field name="customer_rate" class="java.lang.Double"/>
+	<field name="supplier_rate" class="java.lang.Double"/>
+	<field name="fk_user_creat" class="java.lang.Integer"/>
+	<field name="fk_user_modif" class="java.lang.Integer"/>
+	<field name="remise_client" class="java.lang.Double"/>
+	<field name="mode_reglement" class="java.lang.Integer"/>
+	<field name="cond_reglement" class="java.lang.Integer"/>
+	<field name="mode_reglement_supplier" class="java.lang.Integer"/>
+	<field name="cond_reglement_supplier" class="java.lang.Integer"/>
+	<field name="fk_shipping_method" class="java.lang.Integer"/>
+	<field name="tva_assuj" class="java.lang.Integer"/>
+	<field name="localtax1_assuj" class="java.lang.Integer"/>
+	<field name="localtax1_value" class="java.lang.Double"/>
+	<field name="localtax2_assuj" class="java.lang.Integer"/>
+	<field name="localtax2_value" class="java.lang.Double"/>
+	<field name="barcode" class="java.lang.String"/>
+	<field name="fk_barcode_type" class="java.lang.Integer"/>
+	<field name="price_level" class="java.lang.Integer"/>
+	<field name="outstanding_limit" class="java.lang.Double"/>
+	<field name="default_lang" class="java.lang.String"/>
+	<field name="logo" class="java.lang.String"/>
+	<field name="canvas" class="java.lang.String"/>
+	<field name="import_key" class="java.lang.String"/>
+	<field name="webservices_url" class="java.lang.String"/>
+	<field name="webservices_key" class="java.lang.String"/>
+	<field name="fk_multicurrency" class="java.lang.Integer"/>
+	<field name="multicurrency_code" class="java.lang.String"/>
+	<field name="fk_account" class="java.lang.Integer"/>
+	<field name="bairro" class="java.lang.String"/>
+	<field name="numero" class="java.lang.String"/>
+	<field name="complemento" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="false" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="47"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="8"
+						y="5"
+						width="346"
+						height="36"
+						key="staticText-1"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<text><![CDATA[Teste de Titulo]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="222"
+						y="19"
+						width="100"
+						height="18"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{teste}]]></textFieldExpression>
+				</textField>
+				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="388"
+						y="10"
+						width="124"
+						height="31"
+						key="image-1"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA[$P{respath}+"simitlogo.jpg"]]></imageExpression>
+				</image>
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="61"  isSplitAllowed="false" >
+				<image  scaleImage="FillFrame" vAlign="Top" hAlign="Left" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="8"
+						y="9"
+						width="517"
+						height="45"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="barcode-1"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch" fill="Solid" />
+					<imageExpression class="java.awt.Image"><![CDATA[it.businesslogic.ireport.barcode.BcImage.getBarcodeImage(13,"123456789010101010",false,false,null,0,0)]]></imageExpression>
+				</image>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="false" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>
